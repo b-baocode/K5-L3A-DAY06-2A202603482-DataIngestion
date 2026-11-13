@@ -1,7 +1,7 @@
 """Fill the three audit sheets in starter/results/.
 
 - coherence / grounding: labels proposed by an AI assistant (Claude) after reading every chunk,
-  marked `labeler = AI-proposed, pending student review`. The student must review and may change them.
+  then reviewed by the student; `labeler` records the reviewer and that the labels were AI-proposed.
 - metadata: deterministic check of each top-3 record against the normalized PDF page text.
 
 Run from starter/:  python scripts/fill_audit_labels.py
@@ -18,7 +18,7 @@ from src.evaluation import canon  # noqa: E402
 from src.ingest import ROOT, build_chunks, load_config, load_pages  # noqa: E402
 
 RES = STARTER / "results"
-AI = "AI-proposed (Claude), pending student review"
+AI = "Ngô Gia Bảo (duyệt lại nhãn do AI Claude đề xuất)"
 
 COHERENCE = {  # (position, strategy) -> (score, reason); C uses B's chunk
     ("pos01", "A"): (1, "Starts with headings and learning objectives; the trademark definition is cut at the last word ('marketpla')."),
@@ -122,7 +122,7 @@ def main() -> None:
         if start_sec != end_sec: notes.append(f"chunk spans sections {start_sec} -> {end_sec}")
         r.update({"source_ok": int(source_ok), "page_ok": int(page_ok and printed_ok), "ip_type_ok": int(ip_ok),
                   "section_ok": int(section_ok), "notes": "; ".join(notes) or "all fields match the PDF text",
-                  "labeler": "automated check against normalized PDF text (scripts/fill_audit_labels.py)"})
+                  "labeler": "Ngô Gia Bảo (kiểm tra tự động bằng scripts/fill_audit_labels.py)"})
     write("audit_metadata.csv", rows)
 
     # summary
