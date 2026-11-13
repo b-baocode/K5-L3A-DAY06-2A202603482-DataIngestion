@@ -1,0 +1,12 @@
+# Dependencies of this submission (starter/requirements.txt is left unchanged)
+# Core setup and PDF parsing
+psycopg[binary]==3.3.8
+pypdf==6.21.4
+python-dotenv>=1,<2
+# Embedding: google/embeddinggemma-2 (local, CPU). Its processor imports Pillow and torchvision
+# even for text-only use. Install CPU torch/torchvision with:
+#   pip install torch==2.15.0 torchvision==0.29.2 --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers==6.3.0
+transformers==5.22.2
+pillow==13.0.0
+numpy==2.5.4

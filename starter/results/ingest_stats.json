@@ -1,0 +1,80 @@
+{
+  "run_at": "2026-11-13T11:27:53+00:00",
+  "model": "google/embeddinggemma-2",
+  "dimensions": 768,
+  "query_prompt": "task: search result | query: ",
+  "document_prompt": "title: none | text: ",
+  "max_seq_length_tokens": 8192,
+  "model_load_seconds": 9.77,
+  "content_pages": 40,
+  "cost_usd": 0.0,
+  "indexes": {
+    "A": {
+      "spec": {
+        "index": "A",
+        "chunking": "fixed",
+        "size": 500,
+        "overlap": 50,
+        "use_filter": false,
+        "hypothesis": "Baseline: character windows may cut sentences and split evidence."
+      },
+      "chunks": 277,
+      "rows_in_db": 277,
+      "chars_total": 129148,
+      "chars_min": 54,
+      "chars_median": 500,
+      "chars_mean": 466.2,
+      "chars_max": 500,
+      "tokens_total": 31999,
+      "tokens_max": 231,
+      "chunks_truncated_over_max_seq": 0,
+      "chunks_without_section": 2,
+      "chunks_embedded_this_run": 0,
+      "seconds": {
+        "chunk": 0.0,
+        "embed": 0.01,
+        "store": 0.04
+      },
+      "upsert": {
+        "inserted": 0,
+        "updated": 0,
+        "metadata_updated": 0,
+        "unchanged": 277,
+        "deleted": 0
+      }
+    },
+    "B": {
+      "spec": {
+        "index": "B",
+        "chunking": "paragraph",
+        "max_size": 1000,
+        "use_filter": false,
+        "hypothesis": "Paragraph/heading-aware chunks keep whole ideas, raising Hit@1 and coherence vs A."
+      },
+      "chunks": 164,
+      "rows_in_db": 164,
+      "chars_total": 117174,
+      "chars_min": 152,
+      "chars_median": 769.0,
+      "chars_mean": 714.5,
+      "chars_max": 1111,
+      "tokens_total": 26864,
+      "tokens_max": 374,
+      "chunks_truncated_over_max_seq": 0,
+      "chunks_without_section": 1,
+      "chunks_embedded_this_run": 0,
+      "seconds": {
+        "chunk": 0.0,
+        "embed": 0.03,
+        "store": 0.04
+      },
+      "upsert": {
+        "inserted": 0,
+        "updated": 0,
+        "metadata_updated": 0,
+        "unchanged": 164,
+        "deleted": 0
+      }
+    }
+  }
+}

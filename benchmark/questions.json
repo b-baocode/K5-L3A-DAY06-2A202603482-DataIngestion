@@ -1,0 +1,185 @@
+{
+  "version": "1.0",
+  "created_at": "2026-11-13",
+  "frozen_before_first_run": true,
+  "corpus": "openstax-ip-ch4-5 (see data/manifest.json)",
+  "page_convention": "gold_page = physical page of starter/data/openstax-intro-intellectual-property.pdf (1-50)",
+  "evidence_rule": "evidence_quote may be a string or a list of strings; ALL strings of one gold entry must appear in a single retrieved chunk. Matching is done after normalize_text() + whitespace collapse + straight quotes.",
+  "filter_rule": "filter is an input assumed to be supplied by the user/context BEFORE retrieval. Only strategy C applies it; A and B ignore it. Questions without filter run unfiltered in C.",
+  "questions": [
+    {
+      "id": "q01", "split": "dev", "type": "direct",
+      "question": "How often must a registered trademark be renewed under the Lanham Act?",
+      "expected_answer": "Every ten years (to remove 'deadwood' marks no longer in commercial use).",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 6,
+      "evidence_quote": "required the renewal of trademarks every ten years",
+      "filter": null
+    },
+    {
+      "id": "q02", "split": "dev", "type": "conditional",
+      "question": "After how long without use is a trademark presumed to be abandoned?",
+      "expected_answer": "When the owner stops using it for three or more (consecutive) years; anyone else can then register and use it.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 6,
+      "evidence_quote": "A trademark is presumed to have been abandoned when its owner ceases to use it for three or more years",
+      "alternative_gold": [
+        {"gold_page": 19, "evidence_quote": "Evidence of nonuse for three consecutive years is usually considered to be sufficient proof of abandonment."}
+      ],
+      "filter": null
+    },
+    {
+      "id": "q03", "split": "dev", "type": "direct",
+      "question": "Which category of mark is considered the strongest and is prima facie registrable?",
+      "expected_answer": "Fanciful marks (invented words such as Xerox, Google, Kodak).",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 13,
+      "evidence_quote": "Fanciful marks are considered the strongest type of mark and are prima facie registrable with the USPTO.",
+      "filter": null
+    },
+    {
+      "id": "q04", "split": "dev", "type": "exception",
+      "question": "Can a mark that merely describes a product's attributes ever be registered?",
+      "expected_answer": "Not normally; a descriptive mark is registrable only if it has developed a secondary meaning in the public's mind through usage (e.g. Sharp, Windows).",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 13,
+      "evidence_quote": "not eligible for trademark registration unless a secondary meaning or association has been developed in the public’s mind through usage",
+      "filter": null
+    },
+    {
+      "id": "q05", "split": "dev", "type": "paraphrase",
+      "question": "How can a brand become so popular that its owner loses the trademark?",
+      "expected_answer": "When the public associates the mark with a whole category of products, it becomes a generic name and the trademark is lost (Cellophane, Aspirin).",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 14,
+      "evidence_quote": "a valid trademark can become a generic name and the trademark will be lost, as happened with both “Cellophane” and “Aspirin.”",
+      "filter": null
+    },
+    {
+      "id": "q06", "split": "dev", "type": "exception",
+      "question": "Is there any exception to the rule that a mark already used by someone else cannot be registered?",
+      "expected_answer": "Yes, the only exception to the prior use bar is when the mark was used in an entirely different market or field of business (e.g. 'Progressive').",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 14,
+      "evidence_quote": "The only exception to the prior use bar is when the mark has been used in an entirely different market or field of business",
+      "filter": null
+    },
+    {
+      "id": "q07", "split": "dev", "type": "conditional",
+      "question": "For an intent-to-use application, how soon must the mark be used after the USPTO issues a notice of allowance?",
+      "expected_answer": "Within six months, otherwise the applicant risks extension fees or losing the mark.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 18,
+      "evidence_quote": "The mark must then be put into use within six months of receiving a “notice of allowance” from the USPTO",
+      "filter": null
+    },
+    {
+      "id": "q08", "split": "dev", "type": "conditional",
+      "question": "When does a trademark owner become eligible for incontestability status?",
+      "expected_answer": "When the mark is still in commercial use five years after registration (a §15 Declaration must be filed).",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 18,
+      "evidence_quote": "If the trademark is still in commercial use five years after registration, the owner is eligible to receive an additional protection known as “incontestability,”",
+      "filter": null
+    },
+    {
+      "id": "q09", "split": "dev", "type": "direct",
+      "question": "What are the two most important factors courts use to decide whether a mark is likely to cause consumer confusion?",
+      "expected_answer": "The similarity in overall impression of the two marks, and the similarity of the goods and services involved.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 20,
+      "evidence_quote": [
+        "The similarity in the overall impression created by the two marks",
+        "The similarities of the goods and services involved."
+      ],
+      "filter": null
+    },
+    {
+      "id": "q10", "split": "dev", "type": "direct",
+      "question": "When was the Defend Trade Secrets Act signed into law?",
+      "expected_answer": "May 11, 2016.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 34,
+      "evidence_quote": "on May 11, 2016, the federal Defend Trade Secrets Act (DTSA) was signed into law",
+      "filter": null
+    },
+    {
+      "id": "q11", "split": "dev", "type": "direct",
+      "question": "Which states have not yet adopted the Uniform Trade Secrets Act?",
+      "expected_answer": "New York and Massachusetts.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 34,
+      "evidence_quote": "New York and Massachusetts remain the last states that have yet to adopt the UTSA.",
+      "filter": null
+    },
+    {
+      "id": "q12", "split": "dev", "type": "conditional",
+      "question": "Can a company's list of customers qualify for trade secret protection?",
+      "expected_answer": "Not if the customers' identities can be discovered through public sources; the same information can be a trade secret if it is not available publicly.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 35,
+      "evidence_quote": [
+        "customer lists are not considered trade secrets when the identity of the customers could potentially be discovered through public sources",
+        "identical information if not available through public sources could constitute a trade secret"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q13", "split": "dev", "type": "filter",
+      "question": "Where and when did this body of law originate?",
+      "expected_answer": "In England, in the early 1800s.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 34,
+      "evidence_quote": "The general consensus is that trade secret law originated in England in the early 1800s.",
+      "filter": {"ip_type": "trade_secret"},
+      "filter_note": "Without the filter the trademark origins (Bronze Age potters, p3; Sanforth's Case, p5) are plausible distractors."
+    },
+    {
+      "id": "q14", "split": "dev", "type": "filter",
+      "question": "How long does legal protection last, and what can end it?",
+      "expected_answer": "It is granted in perpetuity (no time limit) as long as the owner does not abandon the mark.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 2,
+      "evidence_quote": "they are granted in perpetuity so long as they are not abandoned by the trademark owner",
+      "filter": {"ip_type": "trademark"},
+      "filter_note": "Without the filter the trade-secret 'indefinite future protection' passage (p33) competes."
+    },
+    {
+      "id": "q15", "split": "dev", "type": "filter",
+      "question": "In what circumstances can a court award attorneys' fees?",
+      "expected_answer": "Only in exceptional circumstances: a bad-faith misappropriation claim, bad-faith resistance to a motion to terminate an injunction, or willful and malicious misappropriation.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 47,
+      "evidence_quote": "A bad faith claim of misappropriation, a bad faith resistance to a motion to terminate an injunction, or a finding of willful and malicious appropriation are exceptional circumstances in which an award of attorneys’ fees may be appropriate.",
+      "filter": {"ip_type": "trade_secret"},
+      "filter_note": "Without the filter the trademark remedies list (p22, 'Reasonable attorneys’ fees') competes."
+    },
+    {
+      "id": "q16", "split": "test", "type": "direct",
+      "question": "What factors do courts weigh when an employee who knows trade secrets leaves to work for a new employer?",
+      "expected_answer": "(1) Whether the old and new employers are competitors, (2) whether the new position is comparable to the former one, (3) how effective the new employer's steps to prevent misappropriation are.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 42,
+      "evidence_quote": "(1) whether the former employer and the new employer are competitors, (2) whether the employee’s new position is comparable to the former position, and (3) the efficacy of steps taken by the new employer to prevent the misappropriation of trade secrets.",
+      "filter": null
+    },
+    {
+      "id": "q17", "split": "test", "type": "exception",
+      "question": "Is filing a trade secret lawsuit within the limitation period always enough to obtain relief?",
+      "expected_answer": "No. The UTSA limitation period is three years, but courts can still deny relief if the action was not brought reasonably promptly.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 43,
+      "evidence_quote": "Although the statute of limitations under the UTSA is three years, courts have the power to deny the relief requested by trade secret owners even when an action has been initiated within the statute of limitations period, if the action has not been initiated reasonably promptly.",
+      "filter": null
+    },
+    {
+      "id": "q18", "split": "test", "type": "paraphrase",
+      "question": "Why would a shoe company named after a famous city be refused a trademark if its shoes are made in another country?",
+      "expected_answer": "The name is geographically deceptively misdescriptive: it would likely confuse or deceive consumers about where the goods come from (example: 'New York Shoes' made in China).",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 16,
+      "evidence_quote": "if an entrepreneur launches a fashionable shoe business called “New York Shoes” but actually manufactures the shoes in China, he will not receive a trademark for the name because it will likely confuse or deceive consumers.",
+      "filter": null
+    },
+    {
+      "id": "q19", "split": "test", "type": "filter",
+      "question": "What remedies are available to the owner when their rights are violated?",
+      "expected_answer": "Statutory damages, injunctive relief, attorneys' fees and exemplary damages, depending on the extent of the secrets, manner of misappropriation and damage suffered.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 44,
+      "evidence_quote": "The UTSA provides a full array of remedies, including statutory damages, injunctive relief, attorneys’ fees, and exemplary damages.",
+      "filter": {"ip_type": "trade_secret"},
+      "filter_note": "Without the filter the trademark remedies section 4.10 (p22) competes."
+    },
+    {
+      "id": "q20", "split": "test", "type": "filter",
+      "question": "Why do owners almost always seek an injunction rather than relying only on money damages?",
+      "expected_answer": "Because the biggest loss from infringement is usually not revenue but damage to the brand's reputation in consumers' minds.",
+      "gold_source_id": "openstax-ip-ch4-5", "gold_page": 22,
+      "evidence_quote": "when a trademark is infringed, the biggest loss to the owner is not necessarily revenue but the potential damage to the reputation of the brand in the minds of consumers.",
+      "filter": {"ip_type": "trademark"},
+      "filter_note": "Without the filter the trade-secret injunctive relief passages (p44-45) compete."
+    }
+  ]
+}

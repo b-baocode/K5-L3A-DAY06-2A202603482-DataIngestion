@@ -1,0 +1,102 @@
+{
+  "run_at": "2026-11-13T11:02:33+00:00",
+  "split": "test",
+  "model": "google/embeddinggemma-2",
+  "top_k": 3,
+  "benchmark_version": "1.0",
+  "metrics": {
+    "A": {
+      "test": {
+        "hit_at_1": {
+          "n": 1,
+          "N": 5,
+          "rate": 0.2
+        },
+        "evidence_hit_at_3": {
+          "n": 2,
+          "N": 5,
+          "rate": 0.4
+        },
+        "page_hit_at_3": {
+          "n": 5,
+          "N": 5,
+          "rate": 1.0
+        },
+        "evidence_split_on_gold_page": 3,
+        "filter_questions_hit_at_3": {
+          "n": 1,
+          "N": 2,
+          "rate": 0.5
+        },
+        "filter_compliance_top3": {
+          "n": 0,
+          "N": 2,
+          "rate": 0.0
+        },
+        "mean_latency_ms": 122.7
+      }
+    },
+    "B": {
+      "test": {
+        "hit_at_1": {
+          "n": 3,
+          "N": 5,
+          "rate": 0.6
+        },
+        "evidence_hit_at_3": {
+          "n": 4,
+          "N": 5,
+          "rate": 0.8
+        },
+        "page_hit_at_3": {
+          "n": 4,
+          "N": 5,
+          "rate": 0.8
+        },
+        "evidence_split_on_gold_page": 0,
+        "filter_questions_hit_at_3": {
+          "n": 2,
+          "N": 2,
+          "rate": 1.0
+        },
+        "filter_compliance_top3": {
+          "n": 0,
+          "N": 2,
+          "rate": 0.0
+        },
+        "mean_latency_ms": 120.4
+      }
+    },
+    "C": {
+      "test": {
+        "hit_at_1": {
+          "n": 3,
+          "N": 5,
+          "rate": 0.6
+        },
+        "evidence_hit_at_3": {
+          "n": 4,
+          "N": 5,
+          "rate": 0.8
+        },
+        "page_hit_at_3": {
+          "n": 4,
+          "N": 5,
+          "rate": 0.8
+        },
+        "evidence_split_on_gold_page": 0,
+        "filter_questions_hit_at_3": {
+          "n": 2,
+          "N": 2,
+          "rate": 1.0
+        },
+        "filter_compliance_top3": {
+          "n": 2,
+          "N": 2,
+          "rate": 1.0
+        },
+        "mean_latency_ms": 115.0
+      }
+    }
+  }
+}

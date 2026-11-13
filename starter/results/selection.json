@@ -1,0 +1,69 @@
+{
+  "selected": "C",
+  "tied_after_rules": [],
+  "tied_before_amendment": [
+    "B",
+    "C"
+  ],
+  "ranking_dev": [
+    "B",
+    "C",
+    "A"
+  ],
+  "rule": "max dev Evidence Hit@3; if within 1 question -> max dev Hit@1; AMENDMENT (pre-test): then max dev filter compliance; then resources",
+  "dev_scores": {
+    "B": {
+      "hit_at_3": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.867
+      },
+      "hit_at_1": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.867
+      },
+      "filter_compliance": {
+        "n": 1,
+        "N": 3,
+        "rate": 0.333
+      }
+    },
+    "C": {
+      "hit_at_3": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.867
+      },
+      "hit_at_1": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.867
+      },
+      "filter_compliance": {
+        "n": 3,
+        "N": 3,
+        "rate": 1.0
+      }
+    },
+    "A": {
+      "hit_at_3": {
+        "n": 10,
+        "N": 15,
+        "rate": 0.667
+      },
+      "hit_at_1": {
+        "n": 8,
+        "N": 15,
+        "rate": 0.533
+      },
+      "filter_compliance": {
+        "n": 0,
+        "N": 3,
+        "rate": 0.0
+      }
+    }
+  },
+  "decided_at": "2026-11-13T11:01:39+00:00",
+  "decided_before_test_run": true
+}

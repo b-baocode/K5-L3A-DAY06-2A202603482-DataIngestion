@@ -1,0 +1,169 @@
+{
+  "questions": 20,
+  "split": {
+    "dev": 15,
+    "test": 5
+  },
+  "filter_questions": {
+    "dev": 3,
+    "test": 2
+  },
+  "types": {
+    "direct": 6,
+    "conditional": 4,
+    "exception": 3,
+    "paraphrase": 2,
+    "filter": 5
+  },
+  "included_pages": 40,
+  "errors": [],
+  "checks": [
+    {
+      "id": "q01",
+      "gold_page": 6,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q02",
+      "gold_page": 6,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q02",
+      "gold_page": 19,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q03",
+      "gold_page": 13,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q04",
+      "gold_page": 13,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q05",
+      "gold_page": 14,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q06",
+      "gold_page": 14,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q07",
+      "gold_page": 18,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q08",
+      "gold_page": 18,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q09",
+      "gold_page": 20,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q10",
+      "gold_page": 34,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q11",
+      "gold_page": 34,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q12",
+      "gold_page": 35,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q13",
+      "gold_page": 34,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q14",
+      "gold_page": 2,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q15",
+      "gold_page": 47,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q16",
+      "gold_page": 42,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q17",
+      "gold_page": 43,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q18",
+      "gold_page": 16,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q19",
+      "gold_page": 44,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    },
+    {
+      "id": "q20",
+      "gold_page": 22,
+      "found": true,
+      "in_included_pages": true,
+      "also_found_on": []
+    }
+  ]
+}

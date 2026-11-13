@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,"document_id,source,page,printed_page,ip_type,section,section_title",none,"google/embeddinggemma-2 (768d, pgvector cosine exact)",Baseline: character windows may cut sentences and split evidence.,8/15,10/15,1/5,2/5,277 chunks; full embed 226.8s on CPU; cost $0
+B,paragraph,1000,0,"document_id,source,page,printed_page,ip_type,section,section_title",none,"google/embeddinggemma-2 (768d, pgvector cosine exact)","Paragraph/heading-aware chunks keep whole ideas, raising Hit@1 and coherence vs A.",13/15,13/15,3/5,4/5,164 chunks; full embed 182.6s on CPU; cost $0
+C,paragraph,1000,0,"document_id,source,page,printed_page,ip_type,section,section_title",ip_type (only when question provides it),"google/embeddinggemma-2 (768d, pgvector cosine exact)",Same chunks as B; filtering by ip_type when the question provides it removes cross-chapter distractors.,13/15,13/15,3/5,4/5,"164 chunks; full embed 182.6s on CPU (shared index B, no extra cost); cost $0"

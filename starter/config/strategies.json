@@ -1,0 +1,29 @@
+{
+  "embedding": {
+    "provider": "local sentence-transformers (CPU)",
+    "model": "google/embeddinggemma-2",
+    "model_card": "https://huggingface.co/google/embeddinggemma-2",
+    "model_revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
+    "license": "Apache-2.0",
+    "query_prompt": "task: search result | query: ",
+    "document_prompt": "title: none | text: ",
+    "config_kwargs": {"vision_config": null, "audio_config": null},
+    "truncate_dim": null,
+    "max_tokens": 8192,
+    "dtype": "float32 (set in code; default load is bfloat16)",
+    "extra_dependencies": "sentence-transformers>=6.1, Pillow, torchvision (CPU) — required by the model's processor even for text-only use",
+    "batch_size": 8,
+    "normalize": true,
+    "previous_model_tried": "BAAI/bge-small-en-v1.5 (384d) — ingest only, no benchmark run; replaced before any retrieval evaluation"
+  },
+  "vector_store": {"backend": "PostgreSQL 16 + pgvector 0.8.7", "table": "chunks", "metric": "cosine", "search": "exact (sequential scan, no ANN index)"},
+  "top_k": 3,
+  "strategies": {
+    "A": {"index": "A", "chunking": "fixed", "size": 500, "overlap": 50, "use_filter": false,
+          "hypothesis": "Baseline: character windows may cut sentences and split evidence."},
+    "B": {"index": "B", "chunking": "paragraph", "max_size": 1000, "use_filter": false,
+          "hypothesis": "Paragraph/heading-aware chunks keep whole ideas, raising Hit@1 and coherence vs A."},
+    "C": {"index": "B", "chunking": "paragraph", "max_size": 1000, "use_filter": true,
+          "hypothesis": "Same chunks as B; filtering by ip_type when the question provides it removes cross-chapter distractors."}
+  }
+}
